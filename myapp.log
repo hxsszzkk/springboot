@@ -1,0 +1,20 @@
+2017-10-27 10:50:22.678 ERROR 11588 --- [main] o.s.b.c.FileEncodingApplicationListener  : System property 'file.encoding' is currently 'UTF-8'. It should be 'false' (as defined in 'spring.mandatoryFileEncoding').
+2017-10-27 10:50:22.693 ERROR 11588 --- [main] o.s.b.c.FileEncodingApplicationListener  : Environment variable LANG is 'null'. You could use a locale setting that matches encoding='false'.
+2017-10-27 10:50:22.693 ERROR 11588 --- [main] o.s.b.c.FileEncodingApplicationListener  : Environment variable LC_ALL is 'null'. You could use a locale setting that matches encoding='false'.
+2017-10-27 10:50:22.694  WARN 11588 --- [main] o.s.boot.SpringApplication               : Error handling failed (no error message)
+2017-10-27 10:50:22.721 ERROR 11588 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: The Java Virtual Machine has not been configured to use the desired default character encoding (false).
+	at org.springframework.boot.context.FileEncodingApplicationListener.onApplicationEvent(FileEncodingApplicationListener.java:74) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.context.FileEncodingApplicationListener.onApplicationEvent(FileEncodingApplicationListener.java:46) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:121) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:68) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:335) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at com.website.WebsiteApplication.main(WebsiteApplication.java:32) [classes/:na]
+
